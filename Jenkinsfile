@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sleep 180
+                sleep 120
             }
         }
     }
@@ -51,7 +51,7 @@ pipeline {
 				  -X POST \
 				  -H "Accept: application/vnd.github.v3+json" \
 				  -H "Authorization: Bearer ${GITHUB_TOKEN}" \
-				  https://api.github.com/repos/amit-gueta/exce-mobileye/issues/${getPRNum}/comments \
+				  https://api.github.com/repos/amit-gueta/test-mobileye/issues/${getPRNum}/comments \
 				  -d '{"body":"test this please"}' 
 				   """
 			}
